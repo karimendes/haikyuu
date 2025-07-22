@@ -1,4 +1,15 @@
 :root {
-    --light-color: #e6bd03;
-    --dark-color: #931304;
+    --secondary-color: #e6bd03;
+    --primary-color: #000000;
+    --background-color: #ffffff;
+}
+
+.dark-mode {
+    --background-color: #000000;
+    --primary-color: #ffffff;
+    --secondary-color: #e6bd03;
+}
+
+.dark-mode .dropdown__link.seijou:hover {
+    background-color: var(--blue-seijou);
 }

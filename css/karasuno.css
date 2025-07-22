@@ -1,4 +1,36 @@
 :root {
---dark-color: #3c3f4c;
---light-color: #ef863d;
+--primary-color: #3c3f4c;
+--secondary-color: #ef863d;
+--background-color: #f3f0ee;
+}
+
+.dark-mode {
+    --background-color: #35364a;
+    --primary-color: #f3f0ee;
+    --secondary-color: #ef863d;
+}
+
+.dark-mode .header {
+    background-color: var(--secondary-color);
+}
+
+.dark-mode .nav__link {
+    background-color: transparent;
+}
+
+.dark-mode .dropdown__link {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.dark-mode .dropdown__link:hover {
+    background-color: var(--background-color);
+}
+
+.dark-mode .dropdown__link.karasuno:hover {
+    background-color: var(--background-color);
+}
+
+.dark-mode .dropdown__link.seijou:hover {
+    background-color: var(--blue-seijou);
 }

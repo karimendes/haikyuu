@@ -1,4 +1,11 @@
 :root {
-    --light-color: #ac87a0;
-    --dark-color: #622444;
+    --secondary-color: #ac87a0;
+    --primary-color: #622444;
+    --background-color: #ffffff;
+}
+
+.dark-mode {
+    --background-color: #221d21;
+    --primary-color: #ac217f;
+    --secondary-color: #e2e2e2;
 }

@@ -1,5 +1,11 @@
 :root {
-    --light-color: #40e0d0;
-    --dark-color: #2baba1;
-    --light-background: #f3f5f5;
+    --secondary-color: #40e0d0;
+    --primary-color: #2baba1;
+    --background-color: #f3f5f5;
+}
+
+.dark-mode {
+    --background-color: #141414;
+    --primary-color: #40e0d0;
+    --secondary-color: #f3f5f5;
 }
