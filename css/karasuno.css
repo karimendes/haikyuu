@@ -34,3 +34,9 @@
 .dark-mode .dropdown__link.seijou:hover {
     background-color: var(--blue-seijou);
 }
+
+@media screen and (max-width: 1118px) {
+    .dark-mode .nav__list {
+        background-color: var(--secondary-color);
+    }
+}
