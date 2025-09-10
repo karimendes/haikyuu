@@ -227,14 +227,14 @@ a {
 
 @media (max-width: 820px) {
   .hero {
-    margin-top: 4rem;
+    margin-top: 2rem;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 4rem 5%;
     background-size: cover; 
     background-position: top center;
-    background-image: url("../assets/hero-mobile.png");
+    background-image: url("../assets/hero-mobile.png"), linear-gradient(95deg, #f9cd8c, #faf8e4);
   }
 
   .hero-text {
