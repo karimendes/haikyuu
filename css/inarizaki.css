@@ -1,5 +1,5 @@
 :root {
-    --secondary-color: #e6bd03;
+    --secondary-color: #c89f64;
     --primary-color: #000000;
     --background-color: #ffffff;
 }
@@ -7,7 +7,7 @@
 .dark-mode {
     --background-color: #000000;
     --primary-color: #ffffff;
-    --secondary-color: #e6bd03;
+    --secondary-color: #c89f64;
 }
 
 .dark-mode .dropdown__link.seijou:hover {

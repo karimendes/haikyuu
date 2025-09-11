@@ -14,7 +14,7 @@
 --blue-seijou: #79c6c6;
 --white-seijou: #ffffff;
 
---yellow-inarizaki: #e6bd03;
+--beige-inarizaki: #c89f64;
 --red-inarizaki: #931304;
 
 --red-nekoma: #9b3333;
@@ -154,7 +154,7 @@ a {
   max-width: 30rem;
 }
 
-.btn {
+.btn-hero {
   margin: 0;
   padding: 12px 25px;
   border: 1px solid #f3f0ee;
@@ -167,7 +167,7 @@ a {
   font-size: 1rem;
 }
 
-.btn::after {
+.btn-hero::after {
   content: "";
   z-index: -1;
   position: absolute;
@@ -180,7 +180,7 @@ a {
   border: none;
 }
 
-.btn::before {
+.btn-hero::before {
   content: "";
   background: linear-gradient(45deg,
   #FFD700,  
@@ -211,15 +211,15 @@ a {
   100% {background-position: 0 0;}
 }
 
-.btn:hover::before {
+.btn-hero:hover::before {
   opacity: 1;
 }
 
-.btn:active::after {
+.btn-hero:active::after {
   background: transparent;
 }
 
-.btn:active {
+.btn-hero:active {
   color: #fff;
   border: none;
   font-weight: bold;
@@ -250,7 +250,7 @@ a {
     font-size: 1.2rem;
   }
 
-  .btn {
+  .btn-hero {
     font-size: 1rem;
     padding: 10px 20px;
   }
@@ -269,9 +269,112 @@ a {
     font-size: 0.9rem;
   }
 
-  .btn {
+  .btn-hero {
     font-size: 0.85rem;
     padding: 8px 18px;
+  }
+}
+
+/* ===================== TEAMS GRID ===================== */
+.teams-container {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.school-text {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.teams-card {
+  color: #f3f0ee;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform .3s;
+}
+
+.card-karasuno {
+  background-color: var(--orange-karasuno);
+}
+
+.card-seijou {
+  background-color: var(--blue-seijou);
+}
+
+.card-inarizaki {
+  background-color: #c89f64;
+}
+
+.card-nekoma {
+  background-color: #de3535;
+}
+
+.card-shiratorizawa {
+  background-color: var(--purple-shiratorizawa);
+}
+
+.teams-card:hover {
+  transform: translateY(-8px);
+}
+
+.teams-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.btn-card {
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #f3f0ee;
+  border-radius: 12px;
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 10px 20px;
+}
+
+.card-karasuno .btn-card {
+  color: #3c3f4c;
+}
+
+.card-seijou .btn-card {
+  color: #00968e;
+}
+
+.card-inarizaki .btn-card {
+  color: #66533d;
+}
+
+.card-nekoma .btn-card {
+  color: #e3695b;
+}
+
+.card-shiratorizawa .btn-card {
+  color: #725194;
+}
+
+.btn-card i {
+  animation: moveRight 1s infinite alternate ease-in-out;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(10px);
   }
 }
 
@@ -413,11 +516,13 @@ a {
 }
   
 .dropdown__link.inarizaki:hover, .dark-mode .dropdown__link.inarizaki:hover {
-    background-color: var(--yellow-inarizaki);
+    background-color: var(--beige-inarizaki);
+    color: #f3f0ee;
   }
   
 .dropdown__link.nekoma:hover, .dark-mode .dropdown__link.nekoma:hover {
     background-color: var(--red-nekoma);
+    color: #f3f0ee;
   }
   
 .dropdown__link.shiratorizawa:hover {
@@ -617,6 +722,11 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .teams-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem; 
+  }
+
   .item {
     flex-direction: column;
     align-items: center;
